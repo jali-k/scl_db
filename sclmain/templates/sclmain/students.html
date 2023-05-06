@@ -1,0 +1,139 @@
+{% extends 'sclmain/navbar.html' %} {% block content %}
+
+<div class="container mt-5">
+  <div
+    style="display: flex; justify-content: space-between; align-items: center"
+  >
+    <h1>Student Details</h1>
+    <a class="btn btn-primary" href="/students" role="button">Search Another</a>
+  </div>
+
+  <hr />
+  {% if student.img.url != null %}
+  <div
+    class="card mx-auto"
+    style="width: 33%; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5)"
+  >
+    <img src="{{student.img.url}}" class="card-img-top" alt="Profile Picture" />
+    {% comment %}
+    <div class="card-body">
+      <h5 class="card-title">Your Name</h5>
+      <p class="card-text">Some information about you...</p>
+    </div>
+    {% endcomment %}
+  </div>
+  {% endif %}
+
+  <form>
+    <div class="mb-3">
+      <label for="regNo" class="form-label">Registration Number</label>
+      <input
+        type="text"
+        class="form-control"
+        id="regNo"
+        name="regNo"
+        value="{{student.std_index_no}}"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="idNo" class="form-label">ID Number</label>
+      <input
+        type="text"
+        class="form-control"
+        id="idNo"
+        name="idNo"
+        value="{{student.std_ID}}"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        name="name"
+        value="{{student.name}}"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="gender" class="form-label">Gender</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        name="name"
+        value="{{student.gender}}"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="phone" class="form-label">Phone Number</label>
+      <input
+        type="text"
+        class="form-control"
+        id="phone"
+        name="phone"
+        value="{{student.phone}}"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="birthdate" class="form-label">Birthdate</label>
+      <input
+        type="text"
+        class="form-control"
+        id="phone"
+        name="phone"
+        value="{{student.b_date}}"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="fatherName" class="form-label">Father's Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="phone"
+        name="phone"
+        value="{{student.father_name}}"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="motherName" class="form-label">Mother's Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="phone"
+        name="phone"
+        value="{{student.mother_name}}"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="classroom" class="form-label">Classroom Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="phone"
+        name="phone"
+        value="{{student.classRoom}}"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="comment" class="form-label">Comment</label>
+      <textarea
+        class="form-control"
+        id="comment"
+        name="comment"
+        rows="3"
+        value=""
+      >
+{{student.comment}}</textarea
+      >
+    </div>
+
+    <div style="margin-bottom: 20px">
+      <a class="btn btn-primary" href="/students" role="button"
+        >Search Another</a
+      >
+    </div>
+  </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,48 @@
+body{
+    
+}
+
+.containererr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 2rem;
+    flex-direction: column;
+}
+
+/* Style the text and add an animation */
+h3 {
+    font-size: 6rem;
+    text-align: center;
+    color: #f44336;
+    animation: shake 0.8s;
+    animation-iteration-count: infinite;
+}
+
+/* Define the shake animation */
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-20px);
+    }
+
+    40% {
+        transform: translateX(20px);
+    }
+
+    60% {
+        transform: translateX(-10px);
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}

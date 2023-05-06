@@ -1,0 +1,31 @@
+{% extends 'sclmain/navbar.html' %} {% load static %} {% block styles %}<link
+  href="{% static '/css/searchstudent.css' %}"
+  rel="stylesheet"
+/>{% endblock %} {% block content %}
+
+<div class="containersearch mt-5">
+  <h1>Search</h1>
+  <hr />
+  <form method="POST" action="">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="searchType" class="form-label">Search for:</label>
+      <select class="form-select" id="searchType" name="searchType">
+        <option value="student">Marks</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="searchTerm" class="form-label">Enter search term:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="searchTerm"
+        name="searchTerm"
+        placeholder="Student ID"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+  </form>
+</div>
+
+{% endblock %}

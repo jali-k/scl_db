@@ -1,0 +1,63 @@
+.containersearch {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form select {
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+form select:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.25rem rgba(128, 189, 255, 0.2);
+}
+
+form input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+form input[type="text"]:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.25rem rgba(128, 189, 255, 0.2);
+}
+
+form button {
+    margin-top: 20px;
+    padding: 8px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0069d9;
+}

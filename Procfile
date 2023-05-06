@@ -1,0 +1,1 @@
+web: gunicorn sclweb.wsgi --log-file

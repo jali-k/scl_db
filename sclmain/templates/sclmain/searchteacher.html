@@ -1,0 +1,28 @@
+{% extends 'sclmain/navbar.html' %} {% block content %}
+<div style="margin-left: 50px; margin-right: 50px">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Subject</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Role</th>
+        <th scope="col">Class Room</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for teacher in teachers %}
+
+      <tr>
+        <td>{{teacher.name}}</td>
+        <td>{{teacher.subject}}</td>
+        <td>{{teacher.phone}}</td>
+        <td>{{teacher.role}}</td>
+        <td>{{teacher.classRoom}}</td>
+      </tr>
+
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

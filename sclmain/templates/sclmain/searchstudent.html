@@ -1,0 +1,56 @@
+{% extends 'sclmain/navbar.html' %}
+{% load static %}
+
+{% block styles %}<link href="{% static '/css/searchstudent.css' %}" rel="stylesheet" />{% endblock %}
+
+{% block content %}
+
+
+
+  <div class="containersearch mt-5">
+    <h1>Search</h1>
+    <hr />
+
+    <div class="mb-3">
+        {% if messages %} {% for message in messages %}
+      <div id="msg" class="container-fluid p-0">
+        <div class="alert {{ message.tags }} alert-dismissible" role="alert">
+          <button
+            type="button"
+            class="close closebtn"
+            data-dismiss="alert"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">×</span>
+          </button>
+          {{ message }}
+        </div>
+      </div>
+      {% endfor %} {% endif %}
+      </div>
+
+    <form method="POST" action="">
+      {% csrf_token %}
+      <div class="mb-3">
+        <label for="searchType" class="form-label">Search for:</label>
+        <select class="form-select" id="searchType" name="searchType">
+          <option value="student">Student</option>
+          <option value="classroom">Classroom</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="searchTerm" class="form-label">Enter search term:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="searchTerm"
+          name="searchTerm"
+          placeholder="Student ID or Classroom name(6A, 7A)"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+  </div>
+
+  {% endblock %}
+</div>
