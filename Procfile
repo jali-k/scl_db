@@ -1,1 +1,1 @@
-web: gunicorn sclweb.wsgi --log-file
+web: gunicorn sclweb.wsgi --log-file -
